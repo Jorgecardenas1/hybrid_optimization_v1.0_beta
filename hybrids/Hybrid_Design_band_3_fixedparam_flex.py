@@ -702,7 +702,7 @@ oModule.InsertFrequencySweep("Setup1",
 # =============================================================================
 #  SAVE THE PROJECT AND CLOSE THE PROGRAM
 
-oProject.SaveAs("C:\\Users\\Astrolab\\Documents\\Ansoft\\" +"Band3_Hybrid_8br_fixedparam_flex"+'.aedt', True)
+oProject.SaveAs("C:\\Users\\jorge\\Documents\\Projects Jorge C\\FolderTestPSO\\" +"Band3_Hybrid_8br_fixedparam_flex"+'.aedt', True)
 #oProject.SaveAs("C:\\Users\\Astrolab\\Documents\\Ansoft\\" + '"'+nombre_proyecto+'"'+ ", True)
 # oDesktop.CloseProject("Blade_PSO")
 # =============================================================================

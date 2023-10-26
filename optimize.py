@@ -170,6 +170,7 @@ def run_iterations(iteraciones,bypass ):
             logging.info(msg.SIM_PARTICLE_START + str(particle.id_))
 
             if bypass!="-bypass":
+                """OJo aqui hubo algo con el paso de la variable y tuve que forzarla en la funcion"""
                 simulate.run_simulation_hfss(global_.HFSS_RUN_STRINGS)
 
             #get simulation results

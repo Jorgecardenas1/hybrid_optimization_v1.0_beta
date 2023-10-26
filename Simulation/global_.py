@@ -36,7 +36,10 @@ global branches
 branches = 0
 
 global direccion_Ansoft
-direccion_Ansoft=r"C:\\Users\\Astrolab\\Documents\\Ansoft\\" 
+
+"""poner ojo aqui... esta direccion es la que se busca el aedt"""
+direccion_Ansoft=r"C:\\Users\\jorge\\Documents\\Projects Jorge C\\FolderTestPSO\\"
+#direccion_Ansoft=r"C:\\Program Files\\AnsysEM\\AnsysEM21.2\\Win64\\ansysedt.exe" 
 
 
 global file_folder 
@@ -74,8 +77,8 @@ def setSimID():
     simulationID=str(uuid.uuid4())
 
 global HFSS_RUN_STRINGS
-HFSS_RUN_STRINGS=["C:\Program Files\\AnsysEM\\AnsysEM19.0\\Win64\\ansysedt.exe",
-                    "-features=beta -ng -runscriptandexit", "simulacion.py"]
+HFSS_RUN_STRINGS=["C:\\Program Files\\AnsysEM\\AnsysEM21.2\\Win64\\ansysedt.exe",
+                "-RunScript", "simulacion.py"]
 
 """Other variables"""
 global start_time

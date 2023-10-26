@@ -484,7 +484,8 @@ def create_sim_file(particle, i, j):
 ## Launches HFSS simulation file
 def run_simulation_hfss(hfss_run_strings):
 
-    subprocess.run(hfss_run_strings)
+    subprocess.run(["C:\\Program Files\\AnsysEM\\AnsysEM21.2\\Win64\\ansysedt.exe",
+                "-RunScript", "simulacion.py"])
 
     logging.info(msg.SIM_PARTICLE_FINISHED)
 

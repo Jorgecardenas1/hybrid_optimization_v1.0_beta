@@ -107,7 +107,7 @@ if branches == "Band 2+3 8 br - flex":
 if branches == "Band 3 - flat 8Br Flex":
     nombre_proyecto = "Band3_Hybrid_8br_flex"
     nombre_diseno = "Optimized Hybrid"
-    subprocess.run(["C:\Program Files\\AnsysEM\\AnsysEM19.0\\Win64\\ansysedt.exe",
+    subprocess.run(["C:\\Program Files\\AnsysEM\\AnsysEM21.2\\Win64\\ansysedt.exe",
                 "-RunScript","hybrids/Hybrid_Design_band_3_8br_flex.py"])
 
 if branches == "Band 3 - 8Br":
@@ -119,7 +119,7 @@ if branches == "Band 3 - 8Br":
 if branches=="Band 3 - 8Br Flex":
     nombre_proyecto = "Band3_Hybrid_8br_fixedparam_flex"
     nombre_diseno = "Optimized Hybrid"
-    subprocess.run(["C:\Program Files\\AnsysEM\\AnsysEM19.0\\Win64\\ansysedt.exe",
+    subprocess.run(["C:\\Program Files\\AnsysEM\\AnsysEM21.2\\Win64\\ansysedt.exe",
                 "-RunScript","hybrids/Hybrid_Design_band_3_fixedparam_flex.py"])
 if branches=="Band 3 - 12Br Flex":
     nombre_proyecto = "Band3_Hybrid_12br_3_extruded_fixedparam_flex"
