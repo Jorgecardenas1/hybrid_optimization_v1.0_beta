@@ -490,7 +490,7 @@ def integrate_data (x,y):
 
 def deviation_s31(data_Y,level):
     
-    Y_true = np.full( shape=len(data_Y),fill_value=level, dtype=np.int)
+    Y_true = np.full( shape=len(data_Y),fill_value=level, dtype=np.int32)
     Y_pred = data_Y
 
     # Calculation of Mean Squared Error (MSE)
@@ -499,7 +499,7 @@ def deviation_s31(data_Y,level):
     return MSE
 
 def deviation_s21(data_Y,level):
-    Y_true = np.full( shape=len(data_Y),fill_value=level, dtype=np.int)
+    Y_true = np.full( shape=len(data_Y),fill_value=level, dtype=np.int32)
     Y_pred = data_Y
 
     # Calculation of Mean Squared Error (MSE)

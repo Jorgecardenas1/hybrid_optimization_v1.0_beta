@@ -438,12 +438,13 @@ def create_sim_file(particle, i, j):
     tag = "_"+str(i)+"_"+str(j)     #esta linea genera el string _i_j
     var = "[" + ", ".join([str(x) for x in particle]) + "]" #Generar string del array de datos de la particula
     var_L = str(L)
+
     os.chdir( os.path.normpath(global_.direccion_archivos))
     
     f = open("simulacion.py", "w")   #abre un archivo para escribir
 
-    direccion_dibujo = '"' + global_.direccion_Ansoft + global_.nombre_proyecto \
-                + '.aedt"'
+    direccion_dibujo = '"' + global_.direccion_Ansoft + global_.nombre_proyecto + '.aedt"'
+    
     f.write("import Simulation.funciones as fn\n")
 
 
@@ -484,8 +485,7 @@ def create_sim_file(particle, i, j):
 ## Launches HFSS simulation file
 def run_simulation_hfss(hfss_run_strings):
 
-    subprocess.run(["C:\\Program Files\\AnsysEM\\AnsysEM21.2\\Win64\\ansysedt.exe",
-                "-RunScript", "simulacion.py"])
+    subprocess.run(["C:\\Program Files\\AnsysEM\\AnsysEM21.2\\Win64\\ansysedt.exe", "-RunScriptAndExit", "simulacion.py"])
 
     logging.info(msg.SIM_PARTICLE_FINISHED)
 
@@ -495,6 +495,9 @@ def read_simulation_results(i,j):
     files_location = os.path.join( os.path.normpath(global_.direccion_archivos),r"output",global_.simulationID,r"files")
 
     os.chdir(files_location)
+
+    files= os.chdir(files_location)
+    print( files)
     direccion_graficas_s11= global_.direccion_archivos+ "\\output\\"+global_.simulationID+"\\figures\\S11"+"_" + str(i)+"_"+str(j)
     
     try:

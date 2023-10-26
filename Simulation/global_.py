@@ -11,8 +11,6 @@ local_system = ""
 global current_path
 current_path=""
 
-"""Esto debe ser de esta forma pues HFSS tiene problemas para insertar imports 
-incluso si alguna referencia circular tienen numpy, puede presentar problemas"""
 
 global direccion_archivos
 direccion_archivos=os.path.split(os.path.split(os.path.abspath(__file__))[0])[0]
@@ -37,7 +35,7 @@ branches = 0
 
 global direccion_Ansoft
 
-"""poner ojo aqui... esta direccion es la que se busca el aedt"""
+#poner ojo aqui... esta direccion es la que se busca el aedt
 direccion_Ansoft=r"C:\\Users\\jorge\\Documents\\Projects Jorge C\\FolderTestPSO\\"
 #direccion_Ansoft=r"C:\\Program Files\\AnsysEM\\AnsysEM21.2\\Win64\\ansysedt.exe" 
 
@@ -80,6 +78,5 @@ global HFSS_RUN_STRINGS
 HFSS_RUN_STRINGS=["C:\\Program Files\\AnsysEM\\AnsysEM21.2\\Win64\\ansysedt.exe",
                 "-RunScript", "simulacion.py"]
 
-"""Other variables"""
 global start_time
 start_time = datetime.now()
